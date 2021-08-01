@@ -1,10 +1,31 @@
 div#dashmain{
   
-    background: #F8F8FF;
-    margin-left:270px; 
+    /* background: #F8F8FF; */
     height: 100%;
     width: 100%;
-    position: fixed;
-       
+    position: fixed;  
         
+}
+
+.card{
+    position: relative;
+    width: 1131px;
+    height: relative;
+    left: 304px;
+    top: 152px;
+
+    background: #FFFFFF;
+    box-shadow: 0px 20px 70px rgba(124, 8, 8, 0.2);
+    border-radius: 10px;
+}
+
+h6{
+    
+
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: 600;
+    margin-left: 15px;
+    margin-top: 15px;
+
+    color: #0F123F;
 }
