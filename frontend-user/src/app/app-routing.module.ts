@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { RouterModule, Router } from '@angular/router';
+import { RouterModule,Router, Routes } from '@angular/router';
 
 import { DeleteUserComponent } from '../app/crud/user/delete-user/delete-user.component';
 import { UpdateUserComponent } from '../app/crud/user/update-user/update-user.component';

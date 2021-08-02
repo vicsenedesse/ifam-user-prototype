@@ -1,6 +1,6 @@
-/* div#dashmain { 
+/* div#dashmain {
     background: #F8F8FF;
-    margin-left:270px; 
+    margin-left:270px;
     height: 100%;
     width: 100%;
     position: fixed;
@@ -14,47 +14,28 @@ img{
 }
 
 button {
-    /* margin: 0 auto; */
-    /* margin-left: 80px;
-     
-    /* position: center; */
-
-    margin-top: 5px;
-    margin-bottom: 5px;
-    margin-left: 10px;
-
-    /* position: absolute; */
-    width: 240px;
-    height: 66px;
-    left: 12px;
-    /* right: 5px; */
-    top: 139px;
-
-    background-color: #083E14;
-
-
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-style: normal;
-    font-weight: 600;
-    font-size: 17px;
-    line-height: 25px;
-    border-radius: 10px;
-/* identical to box height */
-
-
-color: #FFFFFF;
-
+  margin-top: 25px;
+  margin-bottom: 5px;
+  margin-left: 10px;
+  width: 240px;
+  height: 66px;
+  left: 12px;
+  top: 139px;
+  background-color: #083E14;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 17px;
+  line-height: 25px;
+  color: #FFFFFF;
+  border-radius: 20px;
 }
 
 button:hover{
     color: #FFFFFF;
     border-color: #330404;
+    background: #a00000 80.75%;
 }
-
-button:active {
-    /* color: var(--drk-blue); */
-    border-color: #330404;
-  }
 
 button:focus{
     outline: none;
@@ -64,11 +45,6 @@ button:focus{
 }
 
 div#dashside {
-    /* position:fixed; 
-    width:200px; 
-    height:100%; 
-    background-color: aqua; */
-
     position: fixed;
     width: 270px;
     height: 100%;

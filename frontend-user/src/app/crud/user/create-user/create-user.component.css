@@ -1,0 +1,59 @@
+.formulario{
+  margin-top: 130px;
+  margin-left: 385px;
+  margin-right: 702px;
+  filter: drop-shadow(0px 2px 70px rgba(124, 8, 8, 0.16));
+}
+
+h3{
+  margin-top: 50px;
+  margin-left: 25px;
+}
+
+.card{
+  margin-top: -50px;
+  margin-left: 1200px;
+  width: 347px;
+  height: 76px;
+  background: #FFFFFF;
+  box-shadow: 0px 20px 70px rgba(86, 89, 146, 0.1);
+  border-radius: 10px;
+}
+
+label#nomeAdm{
+  width: 178px;
+  height: 49px;
+  margin-left: 145px;
+  margin-top: -60px;
+}
+
+label#adm{
+  width: 178px;
+  height: 49px;
+  margin-left: 145px;
+  margin-top: 2px;
+}
+
+#iconUser{
+  margin-top: 15px;
+  border-radius: 50%;
+  margin-left: 15px;
+  margin-top: 2px;
+}
+
+.btn{
+  margin-top: 60px;
+  margin-left: 260px;
+  margin-right: 794px;
+  width: 246px;
+  height: 66px;
+  color:#FFFFFF;
+  background: linear-gradient(90deg, #3F0707 38.41%, #980000 80.75%);
+  box-shadow: 0px 20px 55px rgba(238, 120, 108, 0.25);
+  border-radius: 10px;
+}
+
+.btn:hover{
+  color: #FFFFFF;
+  background: #083E14;
+}

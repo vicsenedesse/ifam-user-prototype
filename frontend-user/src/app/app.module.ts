@@ -1,3 +1,6 @@
+import { DeleteUserComponent } from './crud/user/delete-user/delete-user.component';
+import { UpdateUserComponent } from './crud/user/update-user/update-user.component';
+import { CreateUserComponent } from './crud/user/create-user/create-user.component';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -21,8 +24,10 @@ import { ListUserComponent } from './crud/user/list-user/list-user.component';
     MenubarComponent,
     HeaderComponent,
     HomeComponent,
-
     ListUserComponent,
+    CreateUserComponent,
+    UpdateUserComponent,
+    DeleteUserComponent
 
   ],
   imports: [
@@ -34,7 +39,7 @@ import { ListUserComponent } from './crud/user/list-user/list-user.component';
     ReactiveFormsModule,
 
   ],
-  providers: 
+  providers:
   [
     ListUserService,
 
