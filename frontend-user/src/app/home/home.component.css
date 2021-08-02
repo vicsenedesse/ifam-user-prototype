@@ -3,9 +3,11 @@
 } */
 
 img#imagemFrente{
-  margin-left: 450px;
-  height: 40%;
-  width: 40%;
+  margin-left: 400px;
+  height: 290px;
+  width: 41.65%;
+  object-fit: cover;
+  object-position: center;
 }
 
 h1{
@@ -24,16 +26,30 @@ h2{
 }
 
 .card{
-  margin-top: 50px;
-  margin-left: 450px;
+  /* margin-top: 50px; */
+  /* margin-left: 50px; */
   /* margin-right: 700px; */
-  width: 430px;
+  width: 400px;
   padding: 2%;
   text-align: start;
+  box-shadow: 0px 20px 70px rgba(124, 8, 8, 0.815);
+  border-radius: 10px;
+  background-color: #d2d8d4;
   /* position: fixed; */
 }
 
-
+.imagem{
+  background: url(../../assets/ifam.jpg);
+  /* background: url(../../assets/ifam2.jpg); */
+  background-repeat: no-repeat;
+  background-size: 100%;
+  margin-left: 400px;
+  object-fit: cover;
+  object-position: center;
+  padding-top: 245px;
+  /* padding: 50px; */
+  padding-left: 200px;
+}
 /* img {
     object-fit: cover;
     object-position: center; */

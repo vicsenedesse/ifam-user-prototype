@@ -1,10 +1,11 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit, Pipe, ViewChild } from '@angular/core';
 import { User } from 'src/app/crud/model/user.model';
 import { ListUserService } from 'src/app/crud/service/list.service';
 import { Observable, Subject } from 'rxjs';
 import { Router } from '@angular/router';
 import { catchError, debounceTime, distinctUntilChanged, first, map, switchMap } from 'rxjs/operators';
 import { FormGroup } from '@angular/forms';
+// import { sortBy } from '@types/sort-by';
 // import { ApiResponse } from 'src/app/cadastro/model/api.response';
 
 @Component({
@@ -12,6 +13,8 @@ import { FormGroup } from '@angular/forms';
   templateUrl: './list-user.component.html',
   styleUrls: ['./list-user.component.css']
 })
+
+
 export class ListUserComponent implements OnInit {
 
   users!: Observable<any>;
@@ -55,9 +58,11 @@ export class ListUserComponent implements OnInit {
     this._filterBy = any;
     if (any > 0){
       this.filteredUser = this._users.filter((any: User) => any.id.toString().indexOf(this._filterBy) > -1);
+      // this.filteredUser = this.filteredUser.sort(sortBy('name'))
     }
     else{
       this.filteredUser = this._users.filter((user: User) => user.name.toLocaleLowerCase().indexOf(this._filterBy.toLocaleLowerCase()) > -1);
+      // this.filteredUser = this.filteredUser.sort(sortBy('name'))
     } 
   }
 
@@ -68,3 +73,7 @@ export class ListUserComponent implements OnInit {
   
 
 }
+function sortBy(name: any): any {
+  throw new Error('Function not implemented.');
+}
+
