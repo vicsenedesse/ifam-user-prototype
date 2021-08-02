@@ -1,3 +1,5 @@
+import { UpdateUserService } from 'src/app/crud/service/update.service';
+
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -19,6 +21,8 @@ import { DeleteUserComponent } from './crud/user/delete-user/delete-user.compone
 import { CreateUserComponent } from './crud/user/create-user/create-user.component';
 import { UpdateUserComponent } from './crud/user/update-user/update-user.component';
 import { CreateUserService } from './crud/service/create.service';
+import { AddUserComponent } from './crud/user/update-user/add-user/add-user.component';
+
 
 // import { MatSidenavModule } from '@angular/material/sidenav';
 
@@ -32,7 +36,8 @@ import { CreateUserService } from './crud/service/create.service';
     ListUserComponent,
     DeleteUserComponent,
     CreateUserComponent,
-    UpdateUserComponent
+    UpdateUserComponent,
+    AddUserComponent
 
   ],
   imports: [
@@ -48,6 +53,7 @@ import { CreateUserService } from './crud/service/create.service';
   [
     ListUserService,
     CreateUserService,
+    UpdateUserService,
     HttpClient
   ],
   bootstrap: [AppComponent]
