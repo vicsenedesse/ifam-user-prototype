@@ -1,13 +1,15 @@
 .formulario{
-  margin-top: 130px;
-  margin-left: 385px;
-  margin-right: 702px;
+  margin-top: 30px;
+  margin-left: 400px;
+  margin-right: 650px;
   filter: drop-shadow(0px 2px 70px rgba(124, 8, 8, 0.16));
 }
 
-h3{
-  margin-top: 50px;
-  margin-left: 25px;
+h4{
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  margin-top: 60px;
+  margin-left: 115px;
+  font-weight: bold;
 }
 
 .card{
@@ -43,7 +45,7 @@ label#adm{
 
 .btn{
   margin-top: 60px;
-  margin-left: 260px;
+  margin-left: 200px;
   margin-right: 794px;
   width: 246px;
   height: 66px;

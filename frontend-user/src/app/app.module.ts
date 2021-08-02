@@ -18,6 +18,7 @@ import { ListUserComponent } from './crud/user/list-user/list-user.component';
 import { DeleteUserComponent } from './crud/user/delete-user/delete-user.component';
 import { CreateUserComponent } from './crud/user/create-user/create-user.component';
 import { UpdateUserComponent } from './crud/user/update-user/update-user.component';
+import { CreateUserService } from './crud/service/create.service';
 
 // import { MatSidenavModule } from '@angular/material/sidenav';
 
@@ -46,7 +47,7 @@ import { UpdateUserComponent } from './crud/user/update-user/update-user.compone
   providers:
   [
     ListUserService,
-
+    CreateUserService,
     HttpClient
   ],
   bootstrap: [AppComponent]
