@@ -19,6 +19,8 @@ export class ListUserComponent implements OnInit {
 
   users!: Observable<any>;
 
+  // user!: new User;
+
   filteredUser: User[] = [];
   _users: User[] = [];
   // @ts-ignore
@@ -49,8 +51,14 @@ export class ListUserComponent implements OnInit {
       },
       error: err =>console.log('Error', err)
     });
-    
+  }
 
+  show: boolean = false;
+  user: User = new User();
+
+  password() {
+    this.show = !this.show;
+    
   }
 
 

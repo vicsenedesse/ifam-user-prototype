@@ -51,10 +51,6 @@ import { SortPipe } from './crud/pipe/pipe.component';
   [
     ListUserService,
     CreateUserService,
-<<<<<<< HEAD
-
-=======
->>>>>>> f528f089771d5d2836e86b0ea4e34abee03d1328
     HttpClient
   ],
   bootstrap: [AppComponent]

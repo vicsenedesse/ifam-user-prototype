@@ -31,7 +31,7 @@
                   <th scope="col">Nome</th>
                   <th scope="col">Login</th>
                   <th scope="col">Email</th>
-                  <th scope="col">Senha<i class="bi bi-eye-slash-fill" style="margin-left: 10px;"></i></th>
+                  <th scope="col">Senha<i class="bi bi-eye-slash-fill btn" style="margin-left: 10px;" (click)="password()"></i></th>
                   
                 </tr>
               </thead>
@@ -42,6 +42,9 @@
                   <td>{{user.login}}</td>
                   <td>{{user.email}}</td>
                   <td>******</td>
+                  
+                  <!-- <td [ngIf]="show ? '{{user.password}}' : '******'"></td> -->
+                  <!-- <td>******</td> -->
   
                     <!-- <td>
                       <button style='margin-right:16px' (click)="updateAnimal(animal.animal_id)" class="btn btn-success" style="margin-left: 10px">ATUALIZAR</button>
