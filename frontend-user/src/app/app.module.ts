@@ -19,7 +19,10 @@ import { DeleteUserComponent } from './crud/user/delete-user/delete-user.compone
 import { CreateUserComponent } from './crud/user/create-user/create-user.component';
 import { UpdateUserComponent } from './crud/user/update-user/update-user.component';
 import { CreateUserService } from './crud/service/create.service';
+<<<<<<< HEAD
 import { SortPipe } from './crud/pipe/pipe.component';
+=======
+>>>>>>> f528f089771d5d2836e86b0ea4e34abee03d1328
 
 // import { MatSidenavModule } from '@angular/material/sidenav';
 
@@ -51,7 +54,10 @@ import { SortPipe } from './crud/pipe/pipe.component';
   [
     ListUserService,
     CreateUserService,
+<<<<<<< HEAD
 
+=======
+>>>>>>> f528f089771d5d2836e86b0ea4e34abee03d1328
     HttpClient
   ],
   bootstrap: [AppComponent]

@@ -1,7 +1,6 @@
 <app-menubar></app-menubar>
 
-<div class="container-fluid">
-  <h4>CADASTRO</h4>
+  <h4>Cadastro</h4>
   <div class="card">
     <img id="iconUser" src="../../../../assets/icone-homem.png" width="70px" height="70px">
     <label id="nomeAdm"><Strong>Rodrigo Carvalho</Strong></label>
@@ -23,7 +22,7 @@
       </div>
       <br><div >
         <label for="userPassowrdVerify" class="form-label">SENHA</label>
-        <input type="text" class="form-control" id="userPassowrd" placeholder="Repita a Senha" required [(ngModel)]="user.passwordV" name="passwordV">
+        <input type="text" class="form-control" id="userPassowrd" placeholder="Repita a Senha" required>
       </div>
       <br><div >
         <label for="userEmail" class="form-label">E-MAIL</label>
@@ -31,4 +30,3 @@
       </div>
     <button type="submit"  class="btn btn-outline-success">CADASTRAR</button>
   </form>
-</div>
