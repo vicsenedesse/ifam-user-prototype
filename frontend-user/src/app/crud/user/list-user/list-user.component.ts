@@ -25,7 +25,7 @@ export class ListUserComponent implements OnInit {
   // users!: User[];
   private searchTerms = new Subject<any>();
 
-  _filterBy!: string;
+  _filterBy!: any;
 
 
   constructor(
@@ -50,21 +50,15 @@ export class ListUserComponent implements OnInit {
 
   }
 
-  //TO DO - BY ID
 
-  // getById(id: number) {
-  //   const user = this.users.find(x => x.id === id);
-  //   if (!user) return;
-  //   this.listUserService.getById(id)
-  //       .pipe(first())
-  //       .subscribe(() => this.users = this.users.filter(x => x.id !== id));
-  // }
-
-
-  set filter(name: any) {
-    this._filterBy = name;
-    this.filteredUser = this._users.filter((user: User) => user.name.toLocaleLowerCase().indexOf(this._filterBy.toLocaleLowerCase()) > -1);
-    // this.listUserService.getUserById(id);
+  set filter(any: any) {
+    this._filterBy = any;
+    if (any > 0){
+      this.filteredUser = this._users.filter((any: User) => any.id.toString().indexOf(this._filterBy) > -1);
+    }
+    else{
+      this.filteredUser = this._users.filter((user: User) => user.name.toLocaleLowerCase().indexOf(this._filterBy.toLocaleLowerCase()) > -1);
+    } 
   }
 
   get filter() { 

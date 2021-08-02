@@ -16,13 +16,34 @@
   "profile": {
     "name": "typicode"
   },
-
-  "users":
-  [
-      {"id": 1, "name": "Raphaela Goes", "login": "rph.goes", "email": "email1@gmail.com", "password": "s3nh4"},
-      {"id": 2, "name": "Rodrigo Moura", "login": "rodtigo.moura", "email": "email2@gmail.com", "password": "s3nh4"},
-      {"id": 3, "name": "Victoria Senedesse", "login": "vic.senedesse", "email": "email3@gmail.com", "password": "s3nh4"},
-      {"id": 4, "name": "Yasmin Martins", "login": "yas.martins", "email": "email4@gmail.com", "password": "s3nh4"}
-      
+  "users": [
+    {
+      "id": 1,
+      "name": "Raphaela Goes",
+      "login": "rph.goes",
+      "email": "email1@gmail.com",
+      "password": "s3nh4"
+    },
+    {
+      "id": 2,
+      "name": "Rodrigo Moura",
+      "login": "rodrigo.moura",
+      "email": "email2@gmail.com",
+      "password": "s3nh4"
+    },
+    {
+      "id": 3,
+      "name": "Victoria Senedesse",
+      "login": "vic.senedesse",
+      "email": "email3@gmail.com",
+      "password": "s3nh4"
+    },
+    {
+      "id": 4,
+      "name": "Yasmin Martins",
+      "login": "yas.martins",
+      "email": "email4@gmail.com",
+      "password": "s3nh4"
+    }
   ]
 }

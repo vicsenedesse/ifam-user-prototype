@@ -4,6 +4,7 @@ import {Observable} from "rxjs/index";
 // import { ApiResponse } from '../model/api.response';
 import { User } from '../model/user.model';
 import { environment } from 'src/environments/environment';
+import { map, shareReplay } from 'rxjs/operators';
 
 
 
@@ -23,6 +24,7 @@ export class ListUserService {
   getUserById(id: any): Observable<any> {
     return this.http.get<any>(`${this.baseUrl}/${id}`);
   }
+
 
 
 }
