@@ -50,6 +50,10 @@ export class UpdateUserComponent implements OnInit {
 
   }
 
+  updateUser(id: number){
+    this.router.navigate(['/adicionar/user', id]);
+  }
+
   //TO DO - BY ID
 
   // getById(id: number) {

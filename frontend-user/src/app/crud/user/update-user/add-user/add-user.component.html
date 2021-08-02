@@ -1,0 +1,27 @@
+<app-menubar></app-menubar>
+
+  <h4>Atualizar</h4>
+  <form #form="ngForm" (ngSubmit)="onSubmit()" class="formulario">
+
+      <br><div>
+        <label for="userName" class="form-label">NOME</label>
+        <input type="text" class="form-control" id="userName" placeholder="Nome Completo" required [(ngModel)]="user.name" name="name">
+      </div>
+      <br><div >
+        <label for="userLogin" class="form-label">LOGIN</label>
+        <input type="text" class="form-control" id="userLogin" placeholder="Login" required [(ngModel)]="user.login" name="login">
+      </div>
+      <br><div >
+        <label for="userPassowrd" class="form-label">SENHA</label>
+        <input type="text" class="form-control" id="userPassowrd" placeholder="Senha" required [(ngModel)]="user.password" name="password">
+      </div>
+      <br><div >
+        <label for="userPassowrdVerify" class="form-label">SENHA</label>
+        <input type="text" class="form-control" id="userPassowrd" placeholder="Repita a Senha" required>
+      </div>
+      <br><div >
+        <label for="userEmail" class="form-label">E-MAIL</label>
+        <input type="text" class="form-control" id="userEmail" placeholder="E-mail" required [(ngModel)]="user.email" name="email">
+      </div>
+    <button type="submit"  class="btn btn-light">Salvar</button>
+  </form>

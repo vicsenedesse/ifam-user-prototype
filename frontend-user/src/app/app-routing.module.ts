@@ -1,3 +1,4 @@
+import { AddUserComponent } from './crud/user/update-user/add-user/add-user.component';
 import { NgModule } from '@angular/core';
 import { RouterModule,Router, Routes } from '@angular/router';
 
@@ -18,6 +19,7 @@ const routes: Routes = [
   {path:'cadastrar/user', component:CreateUserComponent},
   {path:'atualizar/user', component:UpdateUserComponent},
   {path:'deletar/user', component:DeleteUserComponent},
+  {path: 'adicionar/user/:id', component:AddUserComponent},
 
 
   //######----GERAL------#########

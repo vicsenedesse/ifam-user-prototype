@@ -1,3 +1,4 @@
+
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -12,13 +13,16 @@ import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 
 import { AppRoutingModule } from './app-routing.module';
 
+import { UpdateUserService } from 'src/app/crud/service/update.service';
 import { ListUserService } from './crud/service/list.service';
+import { CreateUserService } from './crud/service/create.service';
 
 import { ListUserComponent } from './crud/user/list-user/list-user.component';
 import { DeleteUserComponent } from './crud/user/delete-user/delete-user.component';
 import { CreateUserComponent } from './crud/user/create-user/create-user.component';
 import { UpdateUserComponent } from './crud/user/update-user/update-user.component';
-import { CreateUserService } from './crud/service/create.service';
+import { AddUserComponent } from './crud/user/update-user/add-user/add-user.component';
+
 import { SortPipe } from './crud/pipe/pipe.component';
 
 // import { MatSidenavModule } from '@angular/material/sidenav';
@@ -34,6 +38,7 @@ import { SortPipe } from './crud/pipe/pipe.component';
     DeleteUserComponent,
     CreateUserComponent,
     UpdateUserComponent,
+    AddUserComponent,
 
     SortPipe
 
@@ -51,6 +56,9 @@ import { SortPipe } from './crud/pipe/pipe.component';
   [
     ListUserService,
     CreateUserService,
+
+    UpdateUserService,
+
     HttpClient
   ],
   bootstrap: [AppComponent]
