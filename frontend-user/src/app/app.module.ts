@@ -43,7 +43,7 @@ import { UpdateUserComponent } from './crud/user/update-user/update-user.compone
     ReactiveFormsModule,
 
   ],
-  providers: 
+  providers:
   [
     ListUserService,
 
