@@ -1,4 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { Router } from '@angular/router';
+import { Observable, Subject } from 'rxjs';
+import { User } from '../../model/user.model';
+import { ListUserService } from '../../service/list.service';
 
 @Component({
   selector: 'app-delete-user',
@@ -7,9 +11,68 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DeleteUserComponent implements OnInit {
 
-  constructor() { }
+  users!: Observable<any>;
+
+  filteredUser: User[] = [];
+  _users: User[] = [];
+  // @ts-ignore
+  dtOptions: DataTables.Settings = {};
+  // @ts-ignore
+  @ViewChild('dtOptions', {static: true}) table;
+  // users!: User[];
+  private searchTerms = new Subject<any>();
+
+  _filterBy!: string;
+
+
+  constructor(
+    private listUsserService: ListUserService,
+    private router: Router,
+  ) 
+  { 
+  }
 
   ngOnInit() {
+    this.listUsserService.getUser()
+    .subscribe({
+      next: users => {
+        this._users = users;
+        this.filteredUser = this._users;
+      },
+      error:err =>console.log('Error', err)
+    });
+
   }
+  set filter(any: any) {
+    this._filterBy = any;
+    if (any > 0){
+      this.filteredUser = this._users.filter((any: User) => any.id.toString().indexOf(this._filterBy) > -1);
+      // this.filteredUser = this.filteredUser.sort(sortBy('name'))
+    }
+    else{
+      this.filteredUser = this._users.filter((user: User) => user.name.toLocaleLowerCase().indexOf(this._filterBy.toLocaleLowerCase()) > -1);
+      // this.filteredUser = this.filteredUser.sort(sortBy('name'))
+    } 
+  }
+
+  get filter() {
+    return this._filterBy;
+  }
+
+  deleteOp(user: User){
+    console.log(user)
+    this.listUsserService.deleteUserById(user.id).subscribe((resposta)=>{
+      console.log("resposta ao deletar item", resposta)
+      const indexDeletedUser = this._users.findIndex((item) => item.id == user.id)
+      this._users.splice(indexDeletedUser, 1)
+      this.filteredUser = this._users
+      this._filterBy = ""
+
+    })
+
+  }
+
+
+ 
 
 }

@@ -1,0 +1,70 @@
+div#dashmain{
+  
+    /* background: #F8F8FF; */
+    height: 100%;
+    width: 100%;
+    position: fixed;  
+        
+}
+
+.card{
+    position: relative;
+    width: 1131px;
+    height: relative;
+    left: 100px;
+    top: 52px;
+    padding: 15px;
+
+    background: #FFFFFF;
+    box-shadow: 0px 20px 70px rgba(124, 8, 8, 0.2);
+    border-radius: 10px;
+}
+
+h6{
+    
+
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: 600;
+    margin-top: 15px;
+
+    color: #0F123F;
+}
+
+h4{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin-top: 60px;
+    margin-left: 115px;
+    font-weight: bold;
+}
+
+/* .form-control {
+    border-color: #0F123F;
+} */
+
+.form-control:focus{
+    border-color: darkgreen;  
+    box-shadow: 5px 2px 2px rgba(7, 68, 7, 0.267); 
+    /* -webkit-box-shadow: none; */
+    /* filter: drop-shadow(0px 20px 70px rgba(86, 89, 146, 0.1)); */
+}
+
+.form-control{
+    margin-right: 0%;
+}
+
+.btn:focus{
+    border-color: darkgreen;  
+    /* box-shadow: 5px 2px 2px rgba(185, 211, 185, 0.267);  */
+    -webkit-box-shadow: none;
+}
+
+.col{
+    padding: 0%;
+    /* margin-right: 30px; */
+    margin-top: 15px;
+}
+
+div#search{
+    margin-right: 15px;
+}
+

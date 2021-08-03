@@ -37,20 +37,6 @@
       "login": "vic.senedesse",
       "email": "email3@gmail.com",
       "password": "s3nh4"
-    },
-    {
-      "id": 4,
-      "name": "Yasmin Martins",
-      "login": "yas.martins",
-      "email": "email4@gmail.com",
-      "password": "s3nh4"
-    },
-    {
-      "id": 5,
-      "name": "Avril Lavigne",
-      "login": "avril.lavigne",
-      "email": "complicated@gmail.com",
-      "password": "sk8erb0i"
     }
   ]
 }

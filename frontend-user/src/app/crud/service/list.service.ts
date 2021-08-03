@@ -25,6 +25,8 @@ export class ListUserService {
     return this.http.get<any>(`${this.baseUrl}/${id}`);
   }
 
-
-
+  deleteUserById(id: any): Observable<any>{
+    return this.http.delete<any>(`${this.baseUrl}/${id}`);
+    
+  }
 }
