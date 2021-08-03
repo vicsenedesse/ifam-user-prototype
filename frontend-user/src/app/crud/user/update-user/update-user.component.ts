@@ -65,10 +65,16 @@ export class UpdateUserComponent implements OnInit {
   // }
 
 
-  set filter(name: any) {
-    this._filterBy = name;
-    this.filteredUser = this._users.filter((user: User) => user.name.toLocaleLowerCase().indexOf(this._filterBy.toLocaleLowerCase()) > -1);
-    // this.listUserService.getUserById(id);
+  set filter(any: any) {
+    this._filterBy = any;
+    if (any >= 0){
+      this.filteredUser = this._users.filter((any: User) => any.id.toString().indexOf(this._filterBy) > -1);
+      // this.filteredUser = this.filteredUser.sort(sortBy('name'))
+    }
+    else{
+      this.filteredUser = this._users.filter((user: User) => user.name.toLocaleLowerCase().indexOf(this._filterBy.toLocaleLowerCase()) > -1) && this._users.filter((user: User) => user.login.toLocaleLowerCase().indexOf(this._filterBy.toLocaleLowerCase()) > -1); 
+      // this.filteredUser = this.filteredUser.sort(sortBy('name'))
+    }
   }
 
   get filter() {
