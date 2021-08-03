@@ -26,6 +26,7 @@ export class UpdateUserComponent implements OnInit {
   private searchTerms = new Subject<any>();
 
   _filterBy!: string;
+  searchText!: any;
 
 
   constructor(
@@ -42,7 +43,7 @@ export class UpdateUserComponent implements OnInit {
     .subscribe({
       next: users => {
         this._users = users;
-        this.filteredUser = this._users;
+        // this.filteredUser = this._users;
       },
       error: err =>console.log('Error', err)
     });
@@ -63,22 +64,5 @@ export class UpdateUserComponent implements OnInit {
   //       .pipe(first())
   //       .subscribe(() => this.users = this.users.filter(x => x.id !== id));
   // }
-
-
-  set filter(any: any) {
-    this._filterBy = any;
-    if (any >= 0){
-      this.filteredUser = this._users.filter((any: User) => any.id.toString().indexOf(this._filterBy) > -1);
-      // this.filteredUser = this.filteredUser.sort(sortBy('name'))
-    }
-    else{
-      this.filteredUser = this._users.filter((user: User) => user.name.toLocaleLowerCase().indexOf(this._filterBy.toLocaleLowerCase()) > -1) && this._users.filter((user: User) => user.login.toLocaleLowerCase().indexOf(this._filterBy.toLocaleLowerCase()) > -1); 
-      // this.filteredUser = this.filteredUser.sort(sortBy('name'))
-    }
-  }
-
-  get filter() {
-    return this._filterBy;
-  }
 
 }

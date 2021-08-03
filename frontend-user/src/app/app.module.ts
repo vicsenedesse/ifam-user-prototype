@@ -26,6 +26,8 @@ import { AddUserComponent } from './crud/user/update-user/add-user/add-user.comp
 import { SortPipe } from './crud/pipe/pipe.component';
 import { DeleteUserService } from './crud/service/delete.service';
 
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
+
 // import { MatSidenavModule } from '@angular/material/sidenav';
 
 @NgModule({
@@ -41,14 +43,18 @@ import { DeleteUserService } from './crud/service/delete.service';
     UpdateUserComponent,
     AddUserComponent,
 
-    SortPipe
+    SortPipe,
+    
 
   ],
   imports: [
     AppRoutingModule,
     BrowserModule,
     NgbModule,
+
     FormsModule,
+    Ng2SearchPipeModule,
+    
     HttpClientModule,
     ReactiveFormsModule,
 

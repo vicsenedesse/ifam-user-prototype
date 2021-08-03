@@ -11,7 +11,7 @@
             </div>
             <div class="row" id="search">
                 <div class="col">
-                    <input class="form-control" placeholder="Buscar Usuário" style="width: 300px;"   [(ngModel)]="filter"/>
+                    <input class="form-control" placeholder="Buscar Usuário" style="width: 300px;"  type="text" name="search" [(ngModel)]="searchText" #filter/>
                 </div>
                 <div class="col">
                     <!-- <button id="search-button" type="button" class="btn" style="background-color: #e7e7e7;" >
@@ -37,7 +37,7 @@
                 </tr>
               </thead>
               <tbody>
-                <tr *ngFor="let user of filteredUser  | sort: 'name'" scope="row">
+                <tr *ngFor="let user of _users  | sort: 'name' | filter: searchText " scope="row">
                   <td>{{user.id}}</td>
                   <td>{{user.name}}</td>
                   <td>{{user.login}}</td>

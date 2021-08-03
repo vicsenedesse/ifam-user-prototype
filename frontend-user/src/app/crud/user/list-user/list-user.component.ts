@@ -19,10 +19,14 @@ export class ListUserComponent implements OnInit {
 
   users!: Observable<any>;
 
+  searchText: any;
+
   // user!: new User;
 
+  _filterBy: User[] = [];
   filteredUser: User[] = [];
   _users: User[] = [];
+
   // @ts-ignore
   dtOptions: DataTables.Settings = {};
   // @ts-ignore
@@ -30,7 +34,6 @@ export class ListUserComponent implements OnInit {
   // users!: User[];
   private searchTerms = new Subject<any>();
 
-  _filterBy!: any;
 
 
   constructor(
@@ -47,7 +50,7 @@ export class ListUserComponent implements OnInit {
     .subscribe({
       next: users => {
         this._users = users;
-        this.filteredUser = this._users;
+        // this.filteredUser = this._users;
       },
       error: err =>console.log('Error', err)
     });
@@ -62,25 +65,25 @@ export class ListUserComponent implements OnInit {
   }
 
 
-  set filter(any: any) {
-    this._filterBy = any;
-    if (any >= 0){
-      this.filteredUser = this._users.filter((any: User) => any.id.toString().indexOf(this._filterBy) > -1);
-      // this.filteredUser = this.filteredUser.sort(sortBy('name'))
-    }
-    else{
-      this.filteredUser = this._users.filter((user: User) => user.name.toLocaleLowerCase().indexOf(this._filterBy.toLocaleLowerCase()) > -1) && this._users.filter((user: User) => user.login.toLocaleLowerCase().indexOf(this._filterBy.toLocaleLowerCase()) > -1); 
-      // this.filteredUser = this.filteredUser.sort(sortBy('name'))
-    }
-  }
-
-  get filter() { 
-    return this._filterBy;
-  }
-
+  // set filter(any: any) {
+  //   this._filterBy = any;
+  //   if (any >= 0){
+  //     this.filteredUser = this._users.filter((any: User) => any.id.toString().indexOf(this._filterBy) > -1);
+  //     // this.filteredUser = this.filteredUser.sort(sortBy('name'))
+  //   }
+  //   else{
+  //     this.filteredUser = this._users.filter((user: User) => user.login.toLocaleLowerCase().indexOf(this._filterBy.toLocaleLowerCase()) > -1) && this.filteredUser = this._users.filter((user: User) => user.name.toLocaleLowerCase().indexOf(this._filterBy.toLocaleLowerCase()) > -1)
   
+  //     // this.filteredUser = this.filteredUser.sort(sortBy('name'))
+  //   }
+  // }
+
+  // get filter() { 
+  //   return this._filterBy;
+  // }
 
 }
+
 function sortBy(name: any): any {
   throw new Error('Function not implemented.');
 }

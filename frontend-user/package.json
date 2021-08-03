@@ -21,6 +21,7 @@
     "@angular/router": "~12.1.0",
     "@ng-bootstrap/ng-bootstrap": "^10.0.0",
     "bootstrap": "^4.5.0",
+    "ng2-search-filter": "^0.5.1",
     "ngx-bootstrap-icons": "^1.5.2",
     "rxjs": "~6.6.0",
     "sort-by": "^1.2.0",
