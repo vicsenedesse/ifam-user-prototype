@@ -2,6 +2,7 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 import { Observable, Subject } from 'rxjs';
 import { User } from '../../model/user.model';
+import { DeleteUserService } from '../../service/delete.service';
 import { ListUserService } from '../../service/list.service';
 
 @Component({
@@ -26,14 +27,15 @@ export class DeleteUserComponent implements OnInit {
 
 
   constructor(
-    private listUsserService: ListUserService,
+    private listUserService: ListUserService,
+    private deleteUserService: DeleteUserService,
     private router: Router,
   ) 
   { 
   }
 
   ngOnInit() {
-    this.listUsserService.getUser()
+    this.listUserService.getUser()
     .subscribe({
       next: users => {
         this._users = users;
@@ -61,7 +63,7 @@ export class DeleteUserComponent implements OnInit {
 
   deleteOp(user: User){
     console.log(user)
-    this.listUsserService.deleteUserById(user.id).subscribe((resposta)=>{
+    this.deleteUserService.deleteUserById(user.id).subscribe((resposta)=>{
       console.log("resposta ao deletar item", resposta)
       const indexDeletedUser = this._users.findIndex((item) => item.id == user.id)
       this._users.splice(indexDeletedUser, 1)

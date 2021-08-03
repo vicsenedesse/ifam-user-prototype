@@ -24,6 +24,7 @@ import { UpdateUserComponent } from './crud/user/update-user/update-user.compone
 import { AddUserComponent } from './crud/user/update-user/add-user/add-user.component';
 
 import { SortPipe } from './crud/pipe/pipe.component';
+import { DeleteUserService } from './crud/service/delete.service';
 
 // import { MatSidenavModule } from '@angular/material/sidenav';
 
@@ -58,6 +59,7 @@ import { SortPipe } from './crud/pipe/pipe.component';
     CreateUserService,
 
     UpdateUserService,
+    DeleteUserService,
 
     HttpClient
   ],

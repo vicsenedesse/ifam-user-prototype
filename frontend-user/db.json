@@ -19,8 +19,8 @@
   "users": [
     {
       "id": 1,
-      "name": "aiai",
-      "login": "rph",
+      "name": "Raphaela Goes",
+      "login": "rph.goes",
       "email": "email1@gmail.com",
       "password": "s3nh4"
     },
@@ -37,6 +37,28 @@
       "login": "vic.senedesse",
       "email": "email3@gmail.com",
       "password": "s3nh4"
+    },
+    {
+      "id": 4,
+      "name": "Yasmin Martins",
+      "login": "yas.martins",
+      "email": "email4@gmail.com",
+      "password": "s3nh4"
+    },
+    {
+      "id": 5,
+      "name": "Avril Lavigne",
+      "login": "avril.lavigne",
+      "email": "sk8erboi@gmail.com",
+      "password": "c0mpl1c4t3d"
+    },
+    {
+      "id": 6,
+      "name": "Henry Cavill",
+      "login": "henry.cavill",
+      "email": "superman@gmail.com",
+      "password": "s3nh4"
     }
+
   ]
 }
