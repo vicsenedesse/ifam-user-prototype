@@ -40,7 +40,7 @@ export class DeleteUserComponent implements OnInit {
     .subscribe({
       next: users => {
         this._users = users;
-        // this.searchText = this._users;
+        this.filteredUser = this._users;
       },
       error:err =>console.log('Error', err)
     });
@@ -58,6 +58,25 @@ export class DeleteUserComponent implements OnInit {
 
     })
 
+  }
+
+  set filter(any: any) {
+    this._filterBy = any;
+    if (any >= 0){
+      this.filteredUser = this._users.filter((any: User) => any.id.toString().indexOf(this._filterBy) > -1);
+      // this.filteredUser = this.filteredUser.sort(sortBy('name'))
+    }
+    //foi uma luta
+    else{
+      this.filteredUser = this._users.filter((user: User) => 
+                                                user.login.toLocaleLowerCase().indexOf(this._filterBy.toLocaleLowerCase()) > -1 || 
+                                                user.name.toLocaleLowerCase().indexOf(this._filterBy.toLocaleLowerCase()) > -1
+                                            );
+    }
+  }
+
+  get filter() { 
+    return this._filterBy;
   }
 
 
