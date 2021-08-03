@@ -1,7 +1,8 @@
 .formulario{
   margin-top: 30px;
   margin-left: 400px;
-  margin-right: 880px;
+  width: 600px;
+  /* margin-right: 880px; */
   filter: drop-shadow(0px 2px 70px rgba(8, 97, 124, 0.16));
 
 }
@@ -15,19 +16,50 @@ h4{
 
 .btn{
   margin-top: 60px;
-  margin-left: 270px;
-  margin-right: 794px;
+  margin-left: 220px;
+  /* margin-right: 794px; */
   width: 130px;
   height: 40px;
   color: black;
   border-color: black;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   box-shadow: 0px 20px 55px rgba(108, 238, 210, 0.25);
   border-radius: 70px;
   font-size: large;
 }
 
+/* btn:focus{
+  border-color: darkgreen;
+} */
+
 input{
   border-radius: 60px;
   height: 45px;
+}
+
+.form-control:focus{
+  border-color: rgb(0, 138, 148);  
+  box-shadow: 0px 20px 55px rgba(108, 238, 210, 0.25); 
+  /* -webkit-box-shadow: none; */
+  /* filter: drop-shadow(0px 20px 70px rgba(86, 89, 146, 0.1)); */
+}
+
+.form-control{
+  margin-right: 0%;
+}
+
+.form-control:hover{
+  margin-right: 0%;
+  box-shadow: 0px 20px 55px rgba(108, 238, 210, 0.193);
+}
+
+.btn:focus{
+  color: darkgreen;  
+  box-shadow: 5px 2px 2px rgba(185, 194, 211, 0.267); 
+  -webkit-box-shadow: none;
+}
+
+.btn:hover{
+  background-color: rgba(72, 232, 128, 0.398);
+  box-shadow: 5px 2px 2px rgba(185, 194, 211, 0.267);
 }
